@@ -1,0 +1,1520 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --bg: #eef1f7;
+
+    --container: #ffffff;
+
+    --card: #f7f8fb;
+
+    --text: #20242c;
+
+    --secondary: #737b88;
+
+    --border: #e1e5ec;
+
+    --primary: #6366f1;
+
+    --primary-hover: #4f46e5;
+
+    --success: #22c55e;
+
+    --warning: #f59e0b;
+
+    --danger: #ef4444;
+
+    --shadow:
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark {
+
+    --bg: #101218;
+
+    --container: #1a1d24;
+
+    --card: #232730;
+
+    --text: #f2f4f7;
+
+    --secondary: #9ba3b0;
+
+    --border: #303540;
+
+    --primary: #818cf8;
+
+    --primary-hover: #6366f1;
+
+    --shadow:
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--bg);
+
+    color:
+        var(--text);
+
+    min-height:
+        100vh;
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width:
+        min(1100px, 94%);
+
+    margin:
+        30px auto;
+
+    background:
+        var(--container);
+
+    border-radius:
+        25px;
+
+    padding:
+        30px;
+
+    box-shadow:
+        0 20px 70px
+        var(--shadow);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        30px;
+}
+
+
+.logo {
+
+    font-size:
+        30px;
+
+    font-weight:
+        800;
+}
+
+
+.logo span {
+
+    color:
+        var(--primary);
+}
+
+
+.subtitle {
+
+    color:
+        var(--secondary);
+
+    font-size:
+        13px;
+
+    margin-top:
+        5px;
+}
+
+
+.theme-button {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--card);
+
+    color:
+        var(--text);
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.theme-button:hover {
+
+    transform:
+        rotate(20deg)
+        scale(1.1);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        15px;
+
+    margin-bottom:
+        25px;
+}
+
+
+.stat {
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        16px;
+
+    padding:
+        20px;
+
+    text-align:
+        center;
+}
+
+
+.stat-number {
+
+    font-size:
+        30px;
+
+    font-weight:
+        bold;
+
+    color:
+        var(--primary);
+
+    margin-bottom:
+        5px;
+}
+
+
+.stat-label {
+
+    font-size:
+        13px;
+
+    color:
+        var(--secondary);
+}
+
+
+/* =========================================================
+   OVERALL PROGRESS
+========================================================= */
+
+.overall-progress {
+
+    margin-bottom:
+        25px;
+}
+
+
+.progress-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--secondary);
+
+    font-size:
+        14px;
+}
+
+
+.progress {
+
+    width:
+        100%;
+
+    height:
+        12px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+}
+
+
+.progress-bar {
+
+    height:
+        100%;
+
+    width:
+        0%;
+
+    background:
+        var(--primary);
+
+    border-radius:
+        20px;
+
+    transition:
+        width 0.5s;
+}
+
+
+/* =========================================================
+   ADD AREA
+========================================================= */
+
+.add-area {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 140px 145px 120px;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        20px;
+}
+
+
+input,
+select {
+
+    width:
+        100%;
+
+    background:
+        var(--card);
+
+    color:
+        var(--text);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        10px;
+
+    padding:
+        13px;
+
+    outline:
+        none;
+
+    font-size:
+        14px;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color:
+        var(--primary);
+}
+
+
+.add-button {
+
+    border:
+        none;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-weight:
+        bold;
+
+    transition:
+        0.2s;
+}
+
+
+.add-button:hover {
+
+    background:
+        var(--primary-hover);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+
+    margin-bottom:
+        15px;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    flex-wrap:
+        wrap;
+
+    margin-bottom:
+        20px;
+}
+
+
+.filter-button {
+
+    padding:
+        9px 16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        20px;
+
+    background:
+        var(--card);
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.filter-button:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.filter-button.active {
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    color:
+        white;
+}
+
+
+/* =========================================================
+   TASK LIST
+========================================================= */
+
+.task-list {
+
+    list-style:
+        none;
+}
+
+
+.task {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        16px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        16px;
+
+    transition:
+        0.2s;
+
+    animation:
+        appear 0.3s;
+}
+
+
+.task:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 20px
+        var(--shadow);
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+
+.check {
+
+    width:
+        22px;
+
+    height:
+        22px;
+
+    cursor:
+        pointer;
+
+    accent-color:
+        var(--primary);
+}
+
+
+.task-content {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+.task-title {
+
+    font-size:
+        16px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        8px;
+
+    word-break:
+        break-word;
+}
+
+
+.completed .task-title {
+
+    text-decoration:
+        line-through;
+
+    color:
+        var(--secondary);
+}
+
+
+/* =========================================================
+   TASK PROGRESS
+========================================================= */
+
+.task-progress-wrapper {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.task-progress {
+
+    flex:
+        1;
+
+    height:
+        6px;
+
+    background:
+        var(--border);
+
+    border-radius:
+        10px;
+
+    overflow:
+        hidden;
+}
+
+
+.task-progress-bar {
+
+    height:
+        100%;
+
+    background:
+        var(--primary);
+
+    transition:
+        width 0.4s;
+}
+
+
+.task-percent {
+
+    font-size:
+        12px;
+
+    color:
+        var(--secondary);
+
+    min-width:
+        35px;
+
+    text-align:
+        right;
+}
+
+
+/* =========================================================
+   TASK INFO
+========================================================= */
+
+.task-info {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    font-size:
+        12px;
+
+    color:
+        var(--secondary);
+}
+
+
+.high {
+
+    color:
+        var(--danger);
+
+    font-weight:
+        bold;
+}
+
+
+.medium {
+
+    color:
+        var(--warning);
+
+    font-weight:
+        bold;
+}
+
+
+.low {
+
+    color:
+        var(--success);
+
+    font-weight:
+        bold;
+}
+
+
+.overdue {
+
+    color:
+        var(--danger);
+
+    font-weight:
+        bold;
+}
+
+
+/* =========================================================
+   TASK ACTIONS
+========================================================= */
+
+.task-actions {
+
+    display:
+        flex;
+
+    gap:
+        4px;
+}
+
+
+.action-button {
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--secondary);
+
+    cursor:
+        pointer;
+
+    font-size:
+        18px;
+
+    padding:
+        5px;
+
+    transition:
+        0.2s;
+}
+
+
+.action-button:hover {
+
+    transform:
+        scale(1.2);
+}
+
+
+.delete:hover {
+
+    color:
+        var(--danger);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-top:
+        20px;
+
+    font-size:
+        13px;
+
+    color:
+        var(--secondary);
+}
+
+
+.clear-button {
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--danger);
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================================================
+   ANALYTICS
+========================================================= */
+
+.analytics {
+
+    margin-top:
+        40px;
+}
+
+
+.section-title {
+
+    font-size:
+        22px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.analytics-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        20px;
+}
+
+
+.chart-card {
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        18px;
+
+    padding:
+        20px;
+}
+
+
+.chart-title {
+
+    font-size:
+        16px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        15px;
+}
+
+
+canvas {
+
+    width:
+        100%;
+
+    height:
+        250px;
+}
+
+
+/* =========================================================
+   XP
+========================================================= */
+
+.xp-box {
+
+    margin-top:
+        20px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        18px;
+
+    padding:
+        20px;
+}
+
+
+.xp-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        10px;
+}
+
+
+.level {
+
+    font-size:
+        18px;
+
+    font-weight:
+        bold;
+}
+
+
+.xp-text {
+
+    color:
+        var(--secondary);
+
+    font-size:
+        13px;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements {
+
+    margin-top:
+        25px;
+}
+
+
+.achievement-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        10px;
+}
+
+
+.achievement {
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    padding:
+        15px;
+
+    text-align:
+        center;
+
+    opacity:
+        0.35;
+
+    transition:
+        0.3s;
+}
+
+
+.achievement.unlocked {
+
+    opacity:
+        1;
+
+    border-color:
+        var(--primary);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.achievement-icon {
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        7px;
+}
+
+
+.achievement-name {
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    background:
+        rgba(0, 0, 0, 0.6);
+
+    display:
+        none;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        20px;
+
+    z-index:
+        1000;
+}
+
+
+.modal.active {
+
+    display:
+        flex;
+
+    animation:
+        fadeIn 0.2s;
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity:
+            0;
+    }
+
+    to {
+        opacity:
+            1;
+    }
+}
+
+
+.modal-content {
+
+    width:
+        min(500px, 100%);
+
+    background:
+        var(--container);
+
+    border-radius:
+        20px;
+
+    padding:
+        25px;
+
+    box-shadow:
+        0 20px 70px
+        rgba(0, 0, 0, 0.3);
+
+    animation:
+        modalAppear 0.25s;
+}
+
+
+@keyframes modalAppear {
+
+    from {
+
+        transform:
+            scale(0.9)
+            translateY(20px);
+
+        opacity:
+            0;
+    }
+
+    to {
+
+        transform:
+            scale(1)
+            translateY(0);
+
+        opacity:
+            1;
+    }
+}
+
+
+.modal-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        25px;
+}
+
+
+.modal-header h2 {
+
+    font-size:
+        21px;
+}
+
+
+.close-button {
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--secondary);
+
+    font-size:
+        26px;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+
+    margin-bottom:
+        18px;
+}
+
+
+.form-group label {
+
+    display:
+        block;
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        7px;
+}
+
+
+.range-container {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+}
+
+
+.range-container input {
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    background:
+        transparent;
+}
+
+
+.range-value {
+
+    font-weight:
+        bold;
+
+    min-width:
+        45px;
+}
+
+
+/* =========================================================
+   MODAL BUTTONS
+========================================================= */
+
+.modal-buttons {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        10px;
+
+    margin-top:
+        25px;
+}
+
+
+.cancel-button,
+.save-button {
+
+    padding:
+        12px 20px;
+
+    border-radius:
+        10px;
+
+    cursor:
+        pointer;
+
+    font-weight:
+        bold;
+}
+
+
+.cancel-button {
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        var(--card);
+
+    color:
+        var(--text);
+}
+
+
+.save-button {
+
+    border:
+        none;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+}
+
+
+.save-button:hover {
+
+    background:
+        var(--primary-hover);
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty {
+
+    text-align:
+        center;
+
+    padding:
+        40px;
+
+    color:
+        var(--secondary);
+}
+
+
+.empty-icon {
+
+    font-size:
+        50px;
+
+    margin-bottom:
+        10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .add-area {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .analytics-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .achievement-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+
+    .container {
+
+        width:
+            96%;
+
+        padding:
+            18px;
+
+        margin:
+            12px auto;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .add-area {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .header {
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .logo {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .task {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .task-actions {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .bottom {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+        align-items:
+            flex-start;
+
+    }
+
+}
